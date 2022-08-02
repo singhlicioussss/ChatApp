@@ -1,0 +1,29 @@
+<!-- <body>
+    <div class="container">
+        <div class="form">
+         <form [formGroup]="loginForm" (ngSubmit)="onCheck()">
+             <h1>User Login</h1>
+             <input type="text" placeholder="Email" formControlName="email">
+             <input type="password" placeholder="Password" formControlName="password" >
+             <button type="submit" >Login</button>
+         </form>
+        </div>
+        <div class="image">
+            <img src="https://thumbs.dreamstime.com/b/user-icon-member-login-vector-isolated-white-background-form-155134186.jpg" width="300px">
+        </div>
+    </div>
+</body> -->
+<!-- <div class="users-head">
+<h3>People</h3>
+<h4>
+    4
+</h4>
+</div> -->
+<h2>Users present :</h2>
+<div class="container">
+    <div class="users-window">
+    <div class="userslist">
+<p *ngFor="let data of user">{{data.name}}</p>
+</div>
+</div>
+</div>

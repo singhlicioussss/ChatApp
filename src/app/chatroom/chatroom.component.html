@@ -1,0 +1,28 @@
+
+<div class="container"> 
+    <div class="header">
+ <h1>Room Name:{{chatRoomName}}</h1>
+    </div>
+    <div class="messages">
+ <div class="row">
+        <div class="well" *ngFor="let item of messageArray">
+            <span >{{item.user}} : </span>
+            <br>
+            <div class="message-text">
+            <span *ngIf="item.message">{{item.message}}</span>
+            </div>
+            </div>
+            </div>
+<div class="row" style="margin-top:20px;">
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="messageText">            
+    </div>
+    <div class="col-sm-2">
+            <button type="button"
+             class="btn btn-success pull-right" (click)="sendMessage()" >Send</button>
+    </div>
+    <button type="button" class="btn btn-dark pull-right" style="width:60px;margin-top:20px;margin-left:170px;" (click)="leave()" routerLink="/login">Leave</button>
+</div>
+</div>
+</div>
+

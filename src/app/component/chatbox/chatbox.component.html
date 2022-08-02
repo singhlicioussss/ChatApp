@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Avaliable users
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" *ngFor="let user of userArray" > {{user}}</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-light" class=" btn-sm col-xs-2 margin-left" (click)="logout()" >Logout</button>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  
+<div class="container-fluid">
+    <div class="row">
+        <h2 style="margin-left:290px ;">Realtime Chat Application</h2>
+        <hr>
+    </div>
+    <div class="box">
+    <div class="row">
+        <div class="col-sm-5" class="email">
+            <div class="form-group">
+                <b for="username">User Joined In :</b>
+                {{email}}
+            </div>
+        </div>
+        <div class="col-sm-5" id="room">
+            <b for="roomInput">Choose room :</b>
+            <select name="roomInput" id="roomInput" (change)="valueChanged($event)"lass="form-control" [(ngModel)]="room">
+                <option value="Php">Php</option>
+                <option value="Javascript">Javascript</option>
+                <option value="Python">Python</option>
+                <option value="Typescript">Typescript</option>
+                <option value="Java">Java</option>
+            </select>
+        </div>
+        <div class="col sm-2" id="button">
+            <div style="margin-top:19px;" class="pull-right"> 
+                <button type="button"    class="btn btn-primary" (click)="join()">Join</button>
+                <button type="button" class="btn btn-info" style="margin-left: 20px;" routerLink="/privatechat">Private Room</button>
+                
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- <div class="row">
+        <div class="well" *ngFor="let item of messageArray">
+            <span *ngIf="item.message">{{item.user}} :{{item.message}}</span>
+            </div>
+    </div>
+    <div class="row" style="margin-top:20px;">
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="messageText">            
+        </div>
+        <div class="col-sm-2">
+                <button type="button"
+                 class="btn btn-success pull-right" (click)="sendMessage()">Send</button>
+        </div>
+    </div> -->
+</div>

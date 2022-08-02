@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chatapp-1322f": {
+      "hosting": {
+        "inputoutput": [
+          "chatapp-1322f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chatapp-1322f"
+  }
+}
